@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 align="center">Сериалы</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <table style="width:100%">
+            <tr><th style="width:50%">Жанры</th>
+            <th style="width:50%">Настроения</th></tr>
+            <tr><td>
+        <p>
+            {{ form.melodrama(class="form-check-input", type="checkbox") }}
+            {{ form.melodrama.label }}<br>
+        </p>
+            </td>
+            <td>
+                <p>
+            {{ form.sadness(class="form-check-input", type="checkbox") }}
+            {{ form.sadness.label }}<br>
+        </p>
+            </td></tr>
+            <tr><td>
+        <p>
+            {{ form.family(class="form-check-input", type="checkbox") }}
+            {{ form.family.label }}<br>
+        </p>
+                </td>
+            <td>
+                <p>
+            {{ form.joy(class="form-check-input", type="checkbox") }}
+            {{ form.joy.label }}<br>
+        </p>
+            </td></tr>
+            <tr><td>
+        <p>
+            {{ form.drama(class="form-check-input", type="checkbox") }}
+            {{ form.drama.label }}<br>
+        </p>
+                </td>
+            <td>
+                <p>
+            {{ form.loneliness(class="form-check-input", type="checkbox") }}
+            {{ form.loneliness.label }}<br>
+        </p>
+            </td></tr>
+            <tr><td>
+        <p>
+            {{ form.comedy(class="form-check-input", type="checkbox") }}
+            {{ form.comedy.label }}<br>
+        </p>
+                </td>
+            <td>
+                <p>
+            {{ form.calmness(class="form-check-input", type="checkbox") }}
+            {{ form.calmness.label }}<br>
+        </p>
+            </td></tr>
+            <tr><td>
+        <p>
+            {{ form.horror(class="form-check-input", type="checkbox") }}
+            {{ form.horror.label }}<br>
+        </p>
+                </td>
+            <td>
+                <p>
+            {{ form.inspiration(class="form-check-input", type="checkbox") }}
+            {{ form.inspiration.label }}<br>
+        </p>
+            </td>
+            </tr><tr><td></td>
+            <td>
+                <p>
+            {{ form.adrenaline(class="form-check-input", type="checkbox") }}
+            {{ form.adrenaline.label }}<br>
+        </p>
+            </td></tr>
+        </table>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        <div>{{ message }}</div>
+    </form>
+{% endblock %}
